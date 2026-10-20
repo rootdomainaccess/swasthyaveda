@@ -4,17 +4,17 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Brand Blue Palette */
-  --primary-900: #0c2d6b;
-  --primary-800: #0f3d91;
-  --primary-700: #1352b8;
-  --primary-600: #1a66d9;
-  --primary-500: #2979f2;
-  --primary-400: #5a9af5;
-  --primary-300: #8cbbf8;
-  --primary-200: #bdd9fb;
-  --primary-100: #e0edfd;
-  --primary-50:  #f0f6fe;
+  /* Brand Green-White-Golden Palette */
+  --primary-900: #064e3b;   /* Deep forest green */
+  --primary-800: #065f46;   /* Rich green */
+  --primary-700: #047857;   /* vibrant green */
+  --primary-600: #059669;   /* green */
+  --primary-500: #10b981;   /* bright green */
+  --primary-400: #34d399;   /* lighter green */
+  --primary-300: #6ee7b7;   /* soft green */
+  --primary-200: #a7f3d0;   /* pale green */
+  --primary-100: #d1fae5;   /* very pale green */
+  --primary-50:  #f0fdf4;   /* almost white */
 
   /* Neutrals */
   --white: #ffffff;
@@ -30,9 +30,9 @@
   --gray-900: #0f172a;
 
   /* Accent */
-  --accent-green: #059669;
-  --accent-gold:  #d97706;
-  --accent-red:   #dc2626;
+  --accent-green: #10b981;
+  --accent-gold:  #fbbf24;
+  --accent-red:   #ef4444;
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -876,4 +876,83 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 600; }
   .hero__stats { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
   .process-steps { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Luxury Golden Accents & Dark Mode ---------- */
+.golden-text {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--primary-100);
+  border: 1px solid var(--primary-300);
+  color: var(--primary-800);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 1rem;
+}
+.theme-toggle:hover {
+  background: var(--primary-200);
+  transform: scale(1.05);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --white: #0f172a;
+  --gray-50: #1e293b;
+  --gray-100: #1e293b;
+  --gray-200: #334155;
+  --gray-300: #475569;
+  --gray-400: #94a3b8;
+  --gray-500: #cbd5e1;
+  --gray-600: #e2e8f0;
+  --gray-700: #f1f5f9;
+  --gray-800: #f8fafc;
+  --gray-900: #ffffff;
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .condition-chip,
+[data-theme="dark"] .consult-form,
+[data-theme="dark"] .testimonial-card {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .service-card h3,
+[data-theme="dark"] .consult-form h3,
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .bg-gray-50 {
+  background: #0b1329;
+}
+
+[data-theme="dark"] .bg-blue-50 {
+  background: #062821;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
 }

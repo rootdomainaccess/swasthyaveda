@@ -5,7 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Our Clinical Practice | SwasthyaVeda</title>
   <meta name="description" content="Learn about our senior BAMS Ayurvedic practitioner, clinical background in cardiac rehabilitation & lifestyle medicine, and patient care philosophy." />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('swasthyaveda_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="../styles.css" />
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('swasthyaveda_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -37,8 +59,9 @@
       
       <nav class="nav-links" id="navLinks">
         <a href="../index.html">Home</a>
-        <a href="index.html" style="color: var(--primary-600);">About Practice</a>
+        <a href="../index.html" style="color: var(--primary-600);">About Practice</a>
         <a href="../services/index.html">Services</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
         <a href="../consultation/index.html" class="btn btn-primary">Book Consultation</a>
       </nav>
 
@@ -132,5 +155,23 @@
       navLinks.classList.toggle('active');
     });
   </script>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+          icon.className = 'fa-solid fa-sun';
+        }
+        themeToggle.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme');
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('swasthyaveda_theme', next);
+          icon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        });
+      }
+    </script>
+    
 </body>
 </html>
