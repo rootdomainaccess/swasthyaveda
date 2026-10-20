@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Our Clinical Practice | SwasthyaVeda</title>
+  <meta name="description" content="Learn about our senior BAMS Ayurvedic practitioner, clinical background in cardiac rehabilitation & lifestyle medicine, and patient care philosophy." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <span><i class="fa-solid fa-shield-halved"></i> NMC Telemedicine Compliant</span>
+        <span><i class="fa-solid fa-clock"></i> Mon – Sat: 9:00 AM – 7:00 PM IST</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+        <a href="mailto:care@swasthyaveda.in"><i class="fa-solid fa-envelope"></i> care@swasthyaveda.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar__brand">
+        <div class="navbar__logo">SV</div>
+        <div>
+          <div class="navbar__title">SwasthyaVeda</div>
+          <div class="navbar__tagline">Clinical Ayurveda & Cardiology Support</div>
+        </div>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="index.html" style="color: var(--primary-600);">About Practice</a>
+        <a href="../services/index.html">Services</a>
+        <a href="../consultation/index.html" class="btn btn-primary">Book Consultation</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-pad bg-blue-50 text-center" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-subtitle">Clinical Excellence & Experience</div>
+      <h1>About Our Practice & Medical Philosophy</h1>
+      <p class="section-desc">Combining 14+ years of rigorous clinical practice in classical Ayurveda, preventive cardiology, and chronic lifestyle disease management.</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about__image-wrapper">
+          <div class="about__image-placeholder">
+            <div class="icon-big"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3 style="color: var(--primary-800); margin-bottom: 0.5rem;">Senior BAMS Specialist</h3>
+            <p style="font-size: 0.85rem; color: var(--gray-500);">Ex-Madhavbaug Senior Consultant • 14+ Years Clinical Practice</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-subtitle">Clinical Background</div>
+          <h2>Rooted in Authentic Ayurveda, Advanced Through Modern Diagnostics</h2>
+          <p style="margin-top: 1rem; color: var(--gray-600); line-height: 1.8;">
+            Our clinical practice is led by a distinguished Bachelor of Ayurvedic Medicine and Surgery (BAMS) graduate with over 14 years of dedicated clinical experience. Having previously served as a senior consultant at renowned specialized wellness centers such as Madhavbaug, our lead practitioner has successfully managed thousands of cases involving hypertension, type-2 diabetes, obesity, and post-cardiac rehabilitation.
+          </p>
+          <p style="margin-top: 1rem; color: var(--gray-600); line-height: 1.8;">
+            We believe in evidence-based integrative medicine. By combining classical pulse diagnosis (Nadi Pariksha) and botanical formulations with modern pathology reports, ECGs, and clinical blood markers, we ensure safe, measurable, and long-lasting health outcomes for our patients.
+          </p>
+
+          <div style="margin-top: 2rem;" class="about__credentials">
+            <div class="credential-item">
+              <div class="credential-item__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <h4>BAMS Degree & State Medical Council Registration</h4>
+                <p>Fully qualified and registered practitioner adhering to Indian medical statutory standards.</p>
+              </div>
+            </div>
+            <div class="credential-item">
+              <div class="credential-item__icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div>
+                <h4>Specialization in Preventive Cardiology & Lifestyle Care</h4>
+                <p>Extensive clinical background in cardiac care support, lipid management, and dietary rehabilitation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-pad cta-section">
+    <div class="container">
+      <h2>Experience Expert Ayurvedic Guidance</h2>
+      <p>Schedule a video consultation to discuss your health goals and receive a personalized wellness roadmap.</p>
+      <div>
+        <a href="../consultation/index.html" class="btn btn-white" style="color: var(--primary-700);">Book Video Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border: none; padding: 0; justify-content: center;">
+        <div>&copy; <span id="currentYear"></span> SwasthyaVeda Clinical Practice. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

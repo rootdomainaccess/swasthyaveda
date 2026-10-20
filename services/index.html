@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical Services & Consultation Packages | SwasthyaVeda</title>
+  <meta name="description" content="Explore our online Ayurvedic consultation packages, preventive cardiology support, chronic illness care, and personalized dietary protocols." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <span><i class="fa-solid fa-shield-halved"></i> NMC Telemedicine Compliant</span>
+        <span><i class="fa-solid fa-clock"></i> Mon – Sat: 9:00 AM – 7:00 PM IST</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+        <a href="mailto:care@swasthyaveda.in"><i class="fa-solid fa-envelope"></i> care@swasthyaveda.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar__brand">
+        <div class="navbar__logo">SV</div>
+        <div>
+          <div class="navbar__title">SwasthyaVeda</div>
+          <div class="navbar__tagline">Clinical Ayurveda & Cardiology Support</div>
+        </div>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../about/index.html">About Practice</a>
+        <a href="index.html" style="color: var(--primary-600);">Services</a>
+        <a href="../consultation/index.html" class="btn btn-primary">Book Consultation</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-pad bg-blue-50 text-center" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-subtitle">Clinical Offerings</div>
+      <h1>Specialized Ayurvedic Services & Packages</h1>
+      <p class="section-desc">Evidence-based online consultations, cardiac rehabilitation support, and tailored herbal protocols designed for sustainable wellness.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Preventive Cardiology Program</h3>
+          <p>Comprehensive Ayurvedic management for hypertension, high cholesterol, and post-cardiac care support combining herbal medicines with dietary modifications.</p>
+          <div class="service-card__tag">₹1,500 / Session</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3>First-Time Consultation</h3>
+          <p>In-depth case history evaluation, symptom analysis, dietary review, lifestyle assessment, digital e-prescription, and Google Calendar sync.</p>
+          <div class="service-card__tag">₹1,000 / Session</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <h3>Follow-Up Consultation</h3>
+          <p>Progress review, symptom check, medication adjustment, and refined dietary instructions for ongoing chronic care management.</p>
+          <div class="service-card__tag">₹600 / Session</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Chronic Lifestyle Disorder Care</h3>
+          <p>Targeted protocols for Type-2 Diabetes, obesity, thyroid imbalance, joint stiffness, and chronic digestive disorders (Amlapitta).</p>
+          <div class="service-card__tag">₹1,200 / Session</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-file-medical"></i></div>
+          <h3>Medical Report Second Opinion</h3>
+          <p>Detailed analysis of your lab reports, lipid profile, ECG, and blood sugar logs with an expert Ayurvedic perspective.</p>
+          <div class="service-card__tag">₹800 / Review</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Personalized Diet & Herbal Chart</h3>
+          <p>Customized Ahara (dietary) and Vihara (lifestyle) charting aligned with your unique Dosha constitution and health parameters.</p>
+          <div class="service-card__tag">Included in Consultations</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="../consultation/index.html" class="btn btn-primary">Book Your Preferred Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border: none; padding: 0; justify-content: center;">
+        <div>&copy; <span id="currentYear"></span> SwasthyaVeda Clinical Practice. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

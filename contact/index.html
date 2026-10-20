@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | SwasthyaVeda Clinical Care</title>
+  <meta name="description" content="Get in touch with SwasthyaVeda clinical practice for online consultation inquiries, support, and office contact details." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <span><i class="fa-solid fa-shield-halved"></i> NMC Telemedicine Compliant</span>
+        <span><i class="fa-solid fa-clock"></i> Mon – Sat: 9:00 AM – 7:00 PM IST</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+        <a href="mailto:care@swasthyaveda.in"><i class="fa-solid fa-envelope"></i> care@swasthyaveda.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar__brand">
+        <div class="navbar__logo">SV</div>
+        <div>
+          <div class="navbar__title">SwasthyaVeda</div>
+          <div class="navbar__tagline">Clinical Ayurveda & Cardiology Support</div>
+        </div>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../about/index.html">About Practice</a>
+        <a href="../services/index.html">Services</a>
+        <a href="../consultation/index.html" class="btn btn-primary">Book Consultation</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-pad bg-blue-50 text-center" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-subtitle">Get in Touch</div>
+      <h1>Contact Our Clinical Practice</h1>
+      <p class="section-desc">Have questions about online consultations, report uploads, or herbal delivery? We are here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="section-pad">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+      <div>
+        <h2>Clinic Office & Support</h2>
+        <p style="color: var(--gray-600); margin: 1rem 0 2rem; line-height: 1.8;">
+          Our primary practice is focused on online consultations across India. You can reach our administrative office in Mumbai or connect instantly via WhatsApp.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-50); color: var(--primary-600); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Phone / WhatsApp</h4>
+              <p style="font-size: 0.9rem; color: var(--gray-500);">+91 98765 43210 (Mon–Sat, 9am–7pm IST)</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-50); color: var(--primary-600); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Email Support</h4>
+              <p style="font-size: 0.9rem; color: var(--gray-500);">care@swasthyaveda.in</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-50); color: var(--primary-600); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Office Location</h4>
+              <p style="font-size: 0.9rem; color: var(--gray-500);">Mumbai, Maharashtra, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="consult-form" style="max-width: 100%;">
+        <h3 style="margin-bottom: 1rem;">Send Us a Message</h3>
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you shortly.');">
+          <div class="form-group">
+            <label for="cName">Your Name *</label>
+            <input type="text" id="cName" required placeholder="Enter your name" />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email or Phone *</label>
+            <input type="text" id="cEmail" required placeholder="email or phone number" />
+          </div>
+          <div class="form-group">
+            <label for="cMsg">Message *</label>
+            <textarea id="cMsg" required placeholder="How can we assist you?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border: none; padding: 0; justify-content: center;">
+        <div>&copy; <span id="currentYear"></span> SwasthyaVeda Clinical Practice. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

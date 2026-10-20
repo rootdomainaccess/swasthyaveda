@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Online Consultation | SwasthyaVeda Clinical Care</title>
+  <meta name="description" content="Schedule a secure online video consultation with our senior BAMS Ayurvedic specialist. Upload reports and sync with Google Calendar." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__left">
+        <span><i class="fa-solid fa-shield-halved"></i> NMC Telemedicine Compliant</span>
+        <span><i class="fa-solid fa-clock"></i> Mon – Sat: 9:00 AM – 7:00 PM IST</span>
+      </div>
+      <div class="top-bar__right">
+        <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+        <a href="mailto:care@swasthyaveda.in"><i class="fa-solid fa-envelope"></i> care@swasthyaveda.in</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar__brand">
+        <div class="navbar__logo">SV</div>
+        <div>
+          <div class="navbar__title">SwasthyaVeda</div>
+          <div class="navbar__tagline">Clinical Ayurveda & Cardiology Support</div>
+        </div>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../about/index.html">About Practice</a>
+        <a href="../services/index.html">Services</a>
+        <a href="index.html" class="btn btn-primary">Book Consultation</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-pad bg-blue-50 text-center" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-subtitle">Secure Appointment Portal</div>
+      <h1>Book Online Medical Consultation</h1>
+      <p class="section-desc">Consult directly with our senior BAMS clinical specialist via HD video call. Complete the form below to select your time slot and upload medical history.</p>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="section-pad" style="padding-top: 2rem;">
+    <div class="container" style="display: flex; justify-content: center;">
+      <div class="consult-form" style="width: 100%;">
+        <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200);">
+          <h3 style="margin-bottom: 0.25rem;"><i class="fa-solid fa-calendar-days text-primary"></i> Consultation Booking Form</h3>
+          <p style="font-size: 0.85rem; color: var(--gray-500);">All data is encrypted and handled in strict adherence to Indian medical privacy laws.</p>
+        </div>
+
+        <form id="bookingForm" onsubmit="handleBooking(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" required placeholder="Enter your full name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Mobile Number (WhatsApp) *</label>
+              <input type="tel" id="phone" required placeholder="+91 98765 43210" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address (for Google Calendar Sync) *</label>
+              <input type="email" id="email" required placeholder="your.email@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="ageGender">Age / Gender *</label>
+              <input type="text" id="ageGender" required placeholder="e.g., 42 / Male" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="consultType">Consultation Type *</label>
+              <select id="consultType" required>
+                <option value="">Select Consultation Package</option>
+                <option value="first">First Time Consultation (Comprehensive) - ₹1,000</option>
+                <option value="followup">Follow-Up Consultation - ₹600</option>
+                <option value="cardiac">Preventive Cardiology & Diet Program - ₹1,500</option>
+                <option value="chronic">Chronic Lifestyle Disease Review - ₹1,200</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="slotDate">Preferred Date & Time Slot *</label>
+              <input type="datetime-local" id="slotDate" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="symptoms">Primary Health Concerns / Symptoms *</label>
+            <textarea id="symptoms" required placeholder="Describe your primary symptoms, duration, current medications, and past medical history..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="medicalReports">Upload Medical Reports / Lab Tests / ECG (PDF, JPG, PNG)</label>
+            <input type="file" id="medicalReports" multiple accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="form-note">You can upload multiple files (blood reports, ECG, previous prescriptions). Max size 25MB total.</div>
+          </div>
+
+          <div class="consent-check">
+            <input type="checkbox" id="consentNMC" required />
+            <label for="consentNMC" style="font-size: 0.85rem; font-weight: normal; color: var(--gray-600);">
+              I hereby declare that I am seeking this online consultation voluntarily, and I understand that this remote consultation complies with NMC Telemedicine Guidelines. I authorize SwasthyaVeda to send Google Calendar invites and consultation updates to my email/WhatsApp. *
+            </label>
+          </div>
+
+          <div style="margin-top: 2rem; text-align: center;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">
+              <i class="fa-solid fa-lock"></i> Proceed to Secure Payment & Confirm Booking
+            </button>
+          </div>
+        </form>
+
+        <div id="successMessage" style="display: none; text-align: center; padding: 2rem 0;">
+          <div style="font-size: 3rem; color: var(--accent-green); margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Consultation Booking Request Received!</h3>
+          <p style="color: var(--gray-500); margin: 1rem 0;">
+            Thank you. Your slot has been tentatively reserved and synced with Google Calendar. Our clinical coordinator will verify your uploaded reports and send the secure video link and payment link via WhatsApp and email.
+          </p>
+          <a href="../index.html" class="btn btn-outline" style="margin-top: 1rem;">Return to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border: none; padding: 0; justify-content: center;">
+        <div>&copy; <span id="currentYear"></span> SwasthyaVeda Clinical Practice. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    function handleBooking(event) {
+      event.preventDefault();
+      document.getElementById('bookingForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
