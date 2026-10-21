@@ -4,34 +4,44 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Brand Green-White-Golden Palette */
-  --primary-900: #064e3b;   /* Deep forest green */
-  --primary-800: #065f46;   /* Rich green */
-  --primary-700: #047857;   /* vibrant green */
-  --primary-600: #059669;   /* green */
-  --primary-500: #10b981;   /* bright green */
-  --primary-400: #34d399;   /* lighter green */
-  --primary-300: #6ee7b7;   /* soft green */
-  --primary-200: #a7f3d0;   /* pale green */
-  --primary-100: #d1fae5;   /* very pale green */
-  --primary-50:  #f0fdf4;   /* almost white */
+  /* Brand Palette (Decreasing Proportions)
+     1. #D98327 (Golden / Accent - least proportion)
+     2. #ECE8AF (Pale Cream / Soft background tint - secondary/light bg)
+     3. #4A943E (Vibrant Green - supporting brand)
+     4. #186049 (Deep Forest Green - primary dominant)
+  */
+  --accent-gold:  #D98327;
+  --cream-bg:     #ECE8AF;
+  --vibrant-green:#4A943E;
+  --primary-deep: #186049;
+
+  --primary-900: #124b38;      /* Deepest forest green */
+  --primary-800: #186049;   /* #186049 Primary */
+  --primary-700: #1f785c;   
+  --primary-600: #4A943E;   /* #4A943E Supporting */
+  --primary-500: #57a849;   
+  --primary-400: #7ac46c;   
+  --primary-300: #b5e3ab;   
+  --primary-200: #ECE8AF;   /* #ECE8AF Soft cream tint */
+  --primary-100: #f5f6d8;   
+  --primary-50:  #fafae8;   
 
   /* Neutrals */
   --white: #ffffff;
-  --gray-50:  #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-400: #94a3b8;
-  --gray-500: #64748b;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
+  --gray-50:  #f9f9f6;
+  --gray-100: #f1f1eb;
+  --gray-200: #e2e2d8;
+  --gray-300: #c5c5b5;
+  --gray-400: #8c8c7d;
+  --gray-500: #656558;
+  --gray-600: #44443b;
+  --gray-700: #2d2d27;
+  --gray-800: #1c1c18;
+  --gray-900: #0f0f0d;
 
   /* Accent */
-  --accent-green: #10b981;
-  --accent-gold:  #fbbf24;
+  --accent-green: #4A943E;
+  --accent-gold:  #D98327;
   --accent-red:   #ef4444;
 
   /* Typography */
@@ -880,7 +890,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 600; }
 
 /* ---------- Luxury Golden Accents & Dark Mode ---------- */
 .golden-text {
-  background: linear-gradient(135deg, #fbbf24, #d97706);
+  background: linear-gradient(135deg, #D98327, #b56a1b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
