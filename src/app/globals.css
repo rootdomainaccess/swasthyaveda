@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-clinical-cream: #F5EFE3;
+  --color-earthy-olive: #4F5B2A;
+  --color-golden-bronze: #B8892D;
+  --color-warm-sand: #D8C9A8;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-clinical-cream);
+  color: var(--color-earthy-olive);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-earthy-olive);
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+.link {
+  color: var(--color-golden-bronze);
+  transition: color 0.2s;
+}
+.link:hover {
+  color: var(--color-earthy-olive);
+}
