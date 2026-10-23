@@ -17,26 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Swasthyaveda | Online Ayurvedic Healing & Virtual Consultations',
-  description: 'Premium online Ayurvedic care by an elite holistic doctor. Virtual Cardiac Care, Diabetes Reversal, Diet & Nutrition, Weight Management, and Tele-therapy.',
-  keywords: ['Ayurveda', 'Online Consultation', 'Virtual Cardiac Care', 'Diabetes Reversal', 'Holistic Health', 'Tele-therapy'],
-  authors: [{ name: 'Swasthyaveda' }],
-  openGraph: {
-    title: 'Swasthyaveda | Ancient Healing, Modern Accessibility',
-    description: 'Elite Ayurvedic healing delivered through virtual care.',
-    url: 'https://swasthyaveda.example.com',
-    siteName: 'Swasthyaveda',
-    images: [
-      {
-        url: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80',
-        width: 1920,
-        height: 1080,
-        alt: 'Swasthyaveda Online Healing',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
+  title: 'SwasthyaVeda | Elite Virtual Ayurvedic Medicine & Lifestyle Reversal',
+  description: 'Premium virtual Ayurvedic consultations specializing in cardiac wellness, diabetes reversal, and chronic lifestyle disease management through non-invasive medicine.',
+  keywords: ['Ayurveda', 'Online Doctor Consultation', 'Virtual Cardiac Care', 'Diabetes Reversal', 'Holistic Telehealth', 'Prakriti Assessment'],
 };
 
 export default function RootLayout({
@@ -46,9 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-body bg-clinical-cream text-earthy-olive antialiased">
+      <body className="bg-[#FBF8F2] text-[#2A3418] antialiased flex flex-col min-h-screen selection:bg-[#B8892D]/20 selection:text-[#2A3418]">
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-1 pt-24 sm:pt-28">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
