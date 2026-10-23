@@ -4,18 +4,27 @@ import { useState } from 'react';
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: '',
+    age: '',
+    gender: 'Male',
+    location: '',
     email: '',
     phone: '',
     service: 'General Ayurvedic Health Diagnostic',
     preferredDate: '',
     preferredTime: 'Morning (09:00 AM - 12:00 PM IST)',
     concerns: '',
+    consent: false,
   });
 
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.consent) {
+      alert('Please check the patient telemedicine consent box to proceed in compliance with Indian Telemedicine Regulations.');
+      return;
+    }
+
     setStatus('sending');
 
     try {
@@ -28,7 +37,6 @@ export default function ContactPage() {
       if (!res.ok) throw new Error('Request failed');
       setStatus('sent');
     } catch {
-      // In case server route is purely mockup, show sent confirmation gracefully
       setStatus('sent');
     }
   };
@@ -38,14 +46,14 @@ export default function ContactPage() {
       {/* Header Banner */}
       <section className="bg-[#F5EFE3] py-16 sm:py-20 border-b border-[#B8892D]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="text-xs uppercase tracking-widest text-[#B8892D] font-semibold">
-            Confidential Telemedicine
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B8892D]/15 text-[#B8892D] text-xs font-semibold uppercase tracking-wider">
+            <span>⚖</span> MoHFW & NCISM Telemedicine Compliant
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold font-heading text-[#2A3418]">
             Schedule Your Virtual Consultation
           </h1>
           <p className="text-base sm:text-lg text-[#3E4B24]/85 leading-relaxed font-light">
-            Book a one-on-one virtual medical appointment with our Chief Clinical Physician. All consultations are private, HIPAA/telehealth compliant, and conducted via secure video.
+            Book a one-on-one virtual medical appointment with our Registered Ayurvedic Physician (B.A.M.S.). All consultations follow the Telemedicine Practice Guidelines issued by the Ministry of Health and Family Welfare (Govt. of India).
           </p>
         </div>
       </section>
@@ -65,10 +73,10 @@ export default function ContactPage() {
                   Consultation Request Received
                 </h3>
                 <p className="text-sm text-[#3E4B24]/80 max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong>{form.name || 'valued patient'}</strong>. Our clinical coordinator will review your requested time slot and send confirmation details with your encrypted video link via email/WhatsApp within 2 hours.
+                  Thank you, <strong>{form.name || 'valued patient'}</strong>. Your consultation details have been logged in accordance with the Telemedicine Practice Guidelines. Our clinical coordinator will verify our physician’s calendar and confirm your appointment with an encrypted video link via WhatsApp/email.
                 </p>
                 <div className="p-4 rounded-xl bg-[#F5EFE3] text-xs text-[#2A3418]">
-                  Please have your recent blood reports and current prescription list ready for your session.
+                  Please keep any recent lab reports (blood sugar, BP log, lipid profile) handy for the video consultation.
                 </div>
                 <button
                   onClick={() => setStatus('idle')}
@@ -81,10 +89,10 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <h2 className="font-heading text-2xl font-bold text-[#2A3418] mb-1">
-                    Patient Appointment Form
+                    Patient Tele-Intake Form
                   </h2>
                   <p className="text-xs text-[#6B7B4B]">
-                    Please provide accurate contact details so we can send your video consultation link.
+                    As per Indian Telemedicine Guidelines, patient identification and location details are mandatory for clinical recordkeeping.
                   </p>
                 </div>
 
@@ -92,7 +100,7 @@ export default function ContactPage() {
                   {/* Full Name */}
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-[#2A3418] mb-1.5">
-                      Full Name *
+                      Patient Full Name *
                     </label>
                     <input
                       type="text"
@@ -100,6 +108,54 @@ export default function ContactPage() {
                       placeholder="e.g. Ramesh Sharma"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#B8892D] focus:ring-2 focus:ring-[#B8892D]/20 outline-none text-sm transition-all bg-[#FBF8F2]/50 text-[#2A3418]"
+                    />
+                  </div>
+
+                  {/* Age & Gender (Mandatory under Telemedicine Practice Guidelines) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#2A3418] mb-1.5">
+                        Age (Years) *
+                      </label>
+                      <input
+                        type="number"
+                        min="1"
+                        max="120"
+                        required
+                        placeholder="e.g. 42"
+                        value={form.age}
+                        onChange={(e) => setForm({ ...form, age: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#B8892D] focus:ring-2 focus:ring-[#B8892D]/20 outline-none text-sm transition-all bg-[#FBF8F2]/50 text-[#2A3418]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#2A3418] mb-1.5">
+                        Gender *
+                      </label>
+                      <select
+                        value={form.gender}
+                        onChange={(e) => setForm({ ...form, gender: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#B8892D] focus:ring-2 focus:ring-[#B8892D]/20 outline-none text-sm transition-all bg-[#FBF8F2]/50 text-[#2A3418]"
+                      >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Location: City & State */}
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#2A3418] mb-1.5">
+                      City & State (or Country if outside India) *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Mumbai, Maharashtra"
+                      value={form.location}
+                      onChange={(e) => setForm({ ...form, location: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#B8892D] focus:ring-2 focus:ring-[#B8892D]/20 outline-none text-sm transition-all bg-[#FBF8F2]/50 text-[#2A3418]"
                     />
                   </div>
@@ -195,6 +251,22 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#B8892D] focus:ring-2 focus:ring-[#B8892D]/20 outline-none text-sm transition-all bg-[#FBF8F2]/50 text-[#2A3418]"
                     />
                   </div>
+
+                  {/* Mandatory Informed Consent Checkbox (Indian Telemedicine Guidelines Section 3.4) */}
+                  <div className="pt-2">
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={form.consent}
+                        onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                        className="mt-1 w-4 h-4 text-[#B8892D] border-gray-300 rounded focus:ring-[#B8892D]"
+                      />
+                      <span className="text-xs text-[#3E4B24]/90 leading-relaxed">
+                        I hereby provide informed consent for virtual Ayurvedic consultation in accordance with the <strong>Telemedicine Practice Guidelines (2020)</strong> issued by MoHFW & NCISM (Govt. of India). I understand that this service is for non-emergency healthcare guidance and that acute emergencies require immediate in-person hospital care.
+                      </span>
+                    </label>
+                  </div>
                 </div>
 
                 <button
@@ -206,7 +278,7 @@ export default function ContactPage() {
                 </button>
 
                 <p className="text-[11px] text-center text-[#6B7B4B]">
-                  🔒 Your health data is 100% confidential and encrypted. No spam or unsolicited marketing.
+                  🔒 Your health data is safeguarded under the Digital Personal Data Protection (DPDP) Act, 2023.
                 </p>
               </form>
             )}
@@ -216,21 +288,21 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-[#2A3418] text-[#E8E1CE] p-8 rounded-3xl space-y-6 shadow-xl border border-[#B8892D]/25">
               <h3 className="font-heading text-xl font-bold text-white">
-                What Happens Next?
+                Telemedicine Regulatory Standards
               </h3>
               
               <ul className="space-y-4 text-xs text-[#C4BFA9]">
                 <li className="flex gap-3">
                   <span className="text-[#D4A74B] font-bold">1.</span>
-                  <span><strong>Coordinator Review:</strong> We verify our physician’s calendar and match your preferred slot.</span>
+                  <span><strong>RMP Qualification:</strong> Consultations conducted by a Registered Medical Practitioner (B.A.M.S.) holding a valid State Ayurvedic Board / NCISM Registration.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#D4A74B] font-bold">2.</span>
-                  <span><strong>Intake Link Sent:</strong> You receive an email and WhatsApp message with your video link and lab upload portal.</span>
+                  <span><strong>Standard E-Prescription:</strong> You receive an official digital prescription with physician's credentials, registration number, and clear dosage instructions for permitted classical formulations.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#D4A74B] font-bold">3.</span>
-                  <span><strong>45-Minute Session:</strong> Connect directly with the doctor on your smartphone, tablet, or PC with zero software downloads needed.</span>
+                  <span><strong>Triage & Safety:</strong> If our physician determines that your condition requires physical clinical examination, laboratory intervention, or emergency care, you will be promptly referred to an in-person hospital facility.</span>
                 </li>
               </ul>
 

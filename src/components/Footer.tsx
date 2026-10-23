@@ -19,10 +19,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-[#C4BFA9] leading-relaxed">
-              Elite virtual Ayurvedic medicine delivering science-backed reversal protocols for chronic lifestyle and metabolic disorders worldwide.
+              Elite virtual Ayurvedic medicine delivering science-backed reversal protocols for chronic lifestyle and metabolic disorders in compliance with Indian Telemedicine Guidelines.
             </p>
             <div className="pt-2 text-xs text-[#D4A74B] font-medium tracking-widest uppercase">
-              ✦ Certified Ayurvedic Clinical Practice
+              ✦ Registered Medical Practitioner (B.A.M.S.)
             </div>
           </div>
 
@@ -34,13 +34,13 @@ export default function Footer() {
                 <Link href="/" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/about" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">About the Doctor</Link>
+                <Link href="/about" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">About the Physician</Link>
               </li>
               <li>
                 <Link href="/services" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">Clinical Services</Link>
               </li>
               <li>
-                <Link href="/process" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">Care Protocol</Link>
+                <Link href="/process" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">Care Protocol & Telemedicine</Link>
               </li>
               <li>
                 <Link href="/contact" className="text-[#C4BFA9] hover:text-[#D4A74B] transition-colors">Book Consultation</Link>
@@ -77,9 +77,9 @@ export default function Footer() {
 
           {/* Virtual Care Hours */}
           <div className="space-y-4">
-            <h4 className="font-heading text-lg font-semibold text-white mb-4">Consultation Hours</h4>
+            <h4 className="font-heading text-lg font-semibold text-white mb-4">Consultation Desk</h4>
             <p className="text-sm text-[#C4BFA9]">
-              Online appointments available via secure video consultation:
+              Online appointments available via secure, encrypted video:
             </p>
             <div className="text-xs space-y-1.5 text-[#E8E1CE] bg-white/5 p-3 rounded-lg border border-white/10">
               <div className="flex justify-between">
@@ -92,7 +92,7 @@ export default function Footer() {
               </div>
               <div className="flex justify-between">
                 <span>Sunday:</span>
-                <span>Virtual Emergencies Only</span>
+                <span>Emergency In-Person Referral</span>
               </div>
             </div>
             <Link
@@ -104,14 +104,24 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Disclaimer & Copyright */}
+        {/* Regulatory & Telemedicine Compliance Details */}
         <div className="pt-8 text-xs text-[#A19A84] space-y-3">
+          <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
+            <div className="text-[#D4A74B] font-semibold flex items-center gap-2">
+              <span>⚖</span> Indian Telemedicine Regulatory Compliance Statement:
+            </div>
+            <p className="leading-relaxed">
+              SwasthyaVeda operates in strict compliance with the <strong>Telemedicine Practice Guidelines (2020)</strong> notified by the Ministry of Health and Family Welfare (MoHFW) and the National Commission for Indian System of Medicine (NCISM), Government of India. All consultations are provided by a certified Registered Medical Practitioner (B.A.M.S.) registered with the recognized State Ayurvedic Council. Digital prescriptions strictly adhere to permissible Ayurvedic medicines (List O & A). Patient data is maintained confidentially as per the Information Technology Act, 2000 and Digital Personal Data Protection (DPDP) Act, 2023.
+            </p>
+          </div>
+
           <p className="leading-relaxed">
-            <strong className="text-[#D4A74B]">Medical & Telehealth Disclaimer:</strong> SwasthyaVeda provides personalized Ayurvedic consultations, dietary coaching, and lifestyle reversal guidance for chronic conditions. Virtual consultations are not intended to replace emergency medical care or hospital triage. If you are experiencing acute medical emergencies, please visit your nearest hospital emergency department.
+            <strong className="text-[#D4A74B]">Emergency Disclaimer:</strong> Telemedicine is not designed for acute emergencies, severe chest pain, sudden breathlessness, acute poisoning, or surgical crises. In any medical emergency, please report immediately to the nearest hospital casualty or emergency room.
           </p>
+
           <div className="flex flex-col sm:flex-row justify-between items-center pt-4 border-t border-white/5 gap-2 text-xs">
             <p>© {new Date().getFullYear()} SwasthyaVeda. All rights reserved.</p>
-            <p className="text-[#C4BFA9]">Crafted for Holistic Medical Excellence</p>
+            <p className="text-[#C4BFA9]">Ayurvedic Clinical Excellence • Govt. Telemedicine Compliant</p>
           </div>
         </div>
       </div>

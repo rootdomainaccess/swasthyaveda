@@ -8,15 +8,15 @@ export default function AboutPage() {
     },
     {
       title: 'Lab-Monitored Biological Outcomes',
-      text: 'While our medicines originate from centuries of revered Ayurvedic compendia, our success is measured by modern pathology: fasting blood glucose, HbA1c, lipid sub-fractions, blood pressure, and renal panels.',
+      text: 'While our medicines originate from classical Ayurvedic science, our progress is tracked with modern clinical pathology: fasting blood glucose, HbA1c, lipid sub-fractions, blood pressure, and renal panels.',
     },
     {
       title: '100% Non-Invasive Reversal Philosophy',
       text: 'Chronic metabolic disorders are biological adaptations to lifestyle stressors. By removing systemic inflammation and clearing cellular toxins (Ama), the body naturally resets without surgical or aggressive pharmaceutical measures.',
     },
     {
-      title: 'Global Telemedicine Accessibility',
-      text: 'Elite Ayurvedic expertise should not be limited by geography. Patients across the globe access private, encrypted video consultations and certified botanical medicines from their homes.',
+      title: 'MoHFW & NCISM Telemedicine Compliant',
+      text: 'Fully compliant with the Telemedicine Practice Guidelines issued by the Ministry of Health and Family Welfare (MoHFW) and National Commission for Indian System of Medicine (NCISM). Encrypted consultations and verifiable digital records.',
     },
   ];
 
@@ -45,13 +45,13 @@ export default function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden border-2 border-[#B8892D]/30 shadow-2xl bg-[#F5EFE3]">
               <img
                 src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80"
-                alt="Ayurvedic Doctor & Telehealth Physician"
+                alt="Registered Ayurvedic Doctor & Telehealth Practitioner"
                 className="w-full h-96 sm:h-[480px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2A3418] via-transparent to-transparent opacity-75" />
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#B8892D]/30 shadow-lg text-center">
-                <div className="font-heading text-lg font-bold text-[#2A3418]">Chief Clinical Physician</div>
-                <div className="text-xs text-[#B8892D] font-medium tracking-wider uppercase">B.A.M.S, M.D. (Ayurveda) • 15+ Years Clinical Practice</div>
+                <div className="font-heading text-lg font-bold text-[#2A3418]">Chief Ayurvedic Physician</div>
+                <div className="text-xs text-[#B8892D] font-medium tracking-wider uppercase">B.A.M.S. (Ayurveda) • Registered Medical Practitioner (RMP)</div>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-base text-[#3E4B24]/80 leading-relaxed font-light">
-              With over fifteen years of specialized clinical experience treating hypertension, cardiac arrhythmias, stubborn obesity, and advanced type-2 diabetes, our practice bridges the ancient diagnostic depth of <em>Charaka Samhita</em> and <em>Sushruta Samhita</em> with modern laboratory biomarker tracking.
+              With a dedicated clinical focus on hypertension, cardiac wellness, stubborn metabolic weight, and type-2 diabetes, our practice bridges the ancient diagnostic depth of <em>Charaka Samhita</em> and <em>Sushruta Samhita</em> with modern laboratory biomarker tracking.
             </p>
 
             <div className="p-6 rounded-2xl bg-[#F5EFE3] border border-[#B8892D]/20 space-y-2">

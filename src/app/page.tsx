@@ -103,7 +103,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B8892D]/10 border border-[#B8892D]/30 text-[#B8892D] text-xs font-semibold tracking-wider uppercase">
                 <span className="w-2 h-2 rounded-full bg-[#B8892D] animate-ping" />
-                Virtual Clinical Consultations Worldwide
+                Govt. Telemedicine Guidelines Compliant • MoHFW & NCISM
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2A3418] leading-[1.15] tracking-tight">
@@ -112,7 +112,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-[#3E4B24]/85 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                Elite virtual Ayurvedic medicine reversing chronic lifestyle diseases—hypertension, type-2 diabetes, cardiovascular fatigue, and metabolic burnout—through gentle, non-invasive, evidence-based care.
+                Elite virtual Ayurvedic consultations reversing chronic lifestyle diseases—hypertension, type-2 diabetes, cardiovascular fatigue, and metabolic burnout—through gentle, non-invasive, evidence-grounded care.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
@@ -135,18 +135,18 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Trust Badges */}
+              {/* Trust Badges - Honest & Verifiable */}
               <div className="pt-6 border-t border-[#B8892D]/20 grid grid-cols-3 gap-4 text-center lg:text-left">
                 <div>
-                  <div className="font-heading text-2xl sm:text-3xl font-bold text-[#2A3418]">15+</div>
-                  <div className="text-xs text-[#6B7B4B] font-medium uppercase tracking-wider">Years Clinical Practice</div>
+                  <div className="font-heading text-lg sm:text-xl font-bold text-[#2A3418]">B.A.M.S.</div>
+                  <div className="text-xs text-[#6B7B4B] font-medium uppercase tracking-wider">Registered Ayurvedic Doctor</div>
                 </div>
                 <div>
-                  <div className="font-heading text-2xl sm:text-3xl font-bold text-[#2A3418]">10k+</div>
-                  <div className="text-xs text-[#6B7B4B] font-medium uppercase tracking-wider">Virtual Consults</div>
+                  <div className="font-heading text-lg sm:text-xl font-bold text-[#2A3418]">MoHFW Compliant</div>
+                  <div className="text-xs text-[#6B7B4B] font-medium uppercase tracking-wider">Telemedicine Guidelines</div>
                 </div>
                 <div>
-                  <div className="font-heading text-2xl sm:text-3xl font-bold text-[#2A3418]">100%</div>
+                  <div className="font-heading text-lg sm:text-xl font-bold text-[#2A3418]">100%</div>
                   <div className="text-xs text-[#6B7B4B] font-medium uppercase tracking-wider">Non-Invasive Medicine</div>
                 </div>
               </div>
@@ -173,10 +173,10 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="text-xs font-semibold text-[#2A3418] uppercase tracking-wider">
-                          Certified Holistic Clinical Care
+                          Registered Ayurvedic Medical Practice
                         </div>
                         <div className="text-xs text-[#6B7B4B]">
-                          Virtual video consultations across India & globally
+                          Encrypted 1-on-1 video consultations across India & abroad
                         </div>
                       </div>
                     </div>
@@ -185,6 +185,54 @@ export default function HomePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Indian Telemedicine Guidelines Compliance Highlight Bar */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-[#B8892D]/25 shadow-lg space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#B8892D]/15 pb-6">
+            <div className="space-y-1">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-[#B8892D] bg-[#F5EFE3] px-3 py-1 rounded-full">
+                Regulatory Standards
+              </span>
+              <h3 className="font-heading text-2xl font-bold text-[#2A3418] pt-2">
+                Telemedicine Practice Compliance Charter
+              </h3>
+            </div>
+            <div className="text-xs text-[#6B7B4B] font-medium">
+              Compliant with MoHFW & NCISM Guidelines (Govt. of India)
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[#3E4B24]/85">
+            <div className="p-4 rounded-2xl bg-[#FBF8F2] border border-[#B8892D]/15 space-y-2">
+              <div className="font-bold text-[#2A3418] uppercase tracking-wide flex items-center gap-2">
+                <span className="text-[#B8892D] text-sm">✓</span> Verified RMP Consultations
+              </div>
+              <p className="leading-relaxed">
+                All consultations are conducted directly by a qualified, Registered Medical Practitioner (B.A.M.S.) holding a valid council registration.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FBF8F2] border border-[#B8892D]/15 space-y-2">
+              <div className="font-bold text-[#2A3418] uppercase tracking-wide flex items-center gap-2">
+                <span className="text-[#B8892D] text-sm">✓</span> Digital E-Prescription Format
+              </div>
+              <p className="leading-relaxed">
+                Signed digital prescriptions issued with full doctor credentials, registration number, and clear dosage instructions for permitted Ayurvedic formulations.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-[#FBF8F2] border border-[#B8892D]/15 space-y-2">
+              <div className="font-bold text-[#2A3418] uppercase tracking-wide flex items-center gap-2">
+                <span className="text-[#B8892D] text-sm">✓</span> DPDP Act 2023 Patient Privacy
+              </div>
+              <p className="leading-relaxed">
+                Patient records, consultation notes, and health data are stored with strict confidentiality and end-to-end encryption.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -275,7 +323,7 @@ export default function HomePage() {
               How Virtual Healing Works
             </h2>
             <p className="text-[#3E4B24]/80 text-sm sm:text-base">
-              A structured, empathetic medical consultation experience from the comfort and privacy of your home.
+              A structured, empathetic medical consultation experience in compliance with Govt. of India telemedicine standards.
             </p>
           </div>
 
@@ -311,7 +359,7 @@ export default function HomePage() {
               Ready to reverse chronic illness with elite Ayurvedic medicine?
             </h2>
             <p className="text-base text-[#E8E1CE]/85 leading-relaxed font-light">
-              Appointments are strictly one-on-one, confidential, and conducted through high-definition encrypted video. Reserve your slot with our chief clinical physician.
+              Appointments are strictly one-on-one, confidential, and conducted through high-definition encrypted video by our Registered Ayurvedic Physician.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row gap-4">
               <Link
