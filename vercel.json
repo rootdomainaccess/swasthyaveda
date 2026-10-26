@@ -1,21 +1,7 @@
 {
-  "framework": null,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/about", "destination": "/about/index.html" },
-    { "source": "/services", "destination": "/services/index.html" },
-    { "source": "/consultation", "destination": "/consultation/index.html" },
-    { "source": "/contact", "destination": "/contact/index.html" }
+  "version": 2,
+  "builds": [
+    { "src": "next.config.js", "use": "@vercel/next" }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    }
-  ]
+  "routes": []
 }

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-base: #FBF8F2;
+  --color-cream-surface: #F5EFE3;
+  --color-cream-elevated: #EDE5D4;
+  --color-olive-dark: #2A3418;
+  --color-olive-primary: #3E4B24;
+  --color-olive-light: #5B6E35;
+  --color-olive-muted: #6B7B4B;
+  --color-gold-deep: #966F1E;
+  --color-gold-primary: #B8892D;
+  --color-gold-light: #D4A74B;
+  --color-gold-soft: #F0DFC0;
+  --color-sand: #E6DCB8;
+  --font-heading: var(--font-heading), "Playfair Display", Georgia, serif;
+  --font-body: var(--font-body), "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --cream-base: #FBF8F2;
+  --cream-surface: #F5EFE3;
+  --olive-dark: #2A3418;
+  --olive-primary: #3E4B24;
+  --gold-primary: #B8892D;
+  --gold-light: #D4A74B;
+}
+
+html {
+  font-family: var(--font-body), 'Inter', sans-serif;
+  background-color: #FBF8F2;
+  color: #2A3418;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+
+/* Custom premium utility accents */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #B8892D 0%, #D4A74B 50%, #966F1E 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #966F1E 0%, #B8892D 50%, #755412 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.olive-gradient-bg {
+  background: linear-gradient(135deg, #2A3418 0%, #3E4B24 100%);
+}
+
+.luxury-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(184, 137, 45, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(42, 52, 24, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 137, 45, 0.4);
+  box-shadow: 0 20px 35px -10px rgba(42, 52, 24, 0.14);
+}
