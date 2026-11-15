@@ -44,9 +44,9 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border-2 border-[#B8892D]/30 shadow-2xl bg-[#F5EFE3]">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80"
-                alt="Registered Ayurvedic Doctor & Telehealth Practitioner"
-                className="w-full h-96 sm:h-[480px] object-cover"
+                src="/images/doctor.jpg"
+                alt="Chief Ayurvedic Physician - Sudha Ayurveda"
+                className="w-full h-96 sm:h-[480px] object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2A3418] via-transparent to-transparent opacity-75" />
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#B8892D]/30 shadow-lg text-center">
