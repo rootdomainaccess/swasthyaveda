@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Name and email are required.' }, { status: 400 });
     }
 
-    console.log('New SwasthyaVeda Consultation Request (MoHFW Compliant):', {
+    console.log('New Sudha Ayurveda Consultation Request (MoHFW Compliant):', {
       name,
       age,
       gender,

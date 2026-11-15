@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="bg-[#F5EFE3] py-16 sm:py-20 border-b border-[#B8892D]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <div className="text-xs uppercase tracking-widest text-[#B8892D] font-semibold">
-            About SwasthyaVeda
+            About Sudha Ayurveda
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold font-heading text-[#2A3418]">
             The Intersection of Classical Ayurveda and Modern Clinical Science
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-[#3E4B24]/85 leading-relaxed font-light">
-              At SwasthyaVeda, we view disease not as an enemy to be suppressed with aggressive chemicals, but as an expression of biological disharmony within your unique physiology. Modern lifestyles disrupt circadian rhythms, overload digestive metabolism (Agni), and trigger systemic vascular inflammation.
+              At Sudha Ayurveda, we view disease not as an enemy to be suppressed with aggressive chemicals, but as an expression of biological disharmony within your unique physiology. Modern lifestyles disrupt circadian rhythms, overload digestive metabolism (Agni), and trigger systemic vascular inflammation.
             </p>
 
             <p className="text-base text-[#3E4B24]/80 leading-relaxed font-light">
@@ -101,7 +101,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
             <div className="text-xs uppercase tracking-widest text-[#B8892D] font-semibold">
-              The SwasthyaVeda Standard
+              The Sudha Ayurveda Standard
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2A3418] font-heading">
               Our 4 Clinical Guarantees

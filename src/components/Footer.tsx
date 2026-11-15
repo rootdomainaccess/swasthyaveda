@@ -15,7 +15,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-heading text-2xl font-bold tracking-tight text-white">
-                Swasthya<span className="text-[#D4A74B]">Veda</span>
+                Sudha <span className="text-[#D4A74B]">Ayurveda</span>
               </span>
             </div>
             <p className="text-sm text-[#C4BFA9] leading-relaxed">
@@ -111,7 +111,7 @@ export default function Footer() {
               <span>⚖</span> Indian Telemedicine Regulatory Compliance Statement:
             </div>
             <p className="leading-relaxed">
-              SwasthyaVeda operates in strict compliance with the <strong>Telemedicine Practice Guidelines (2020)</strong> notified by the Ministry of Health and Family Welfare (MoHFW) and the National Commission for Indian System of Medicine (NCISM), Government of India. All consultations are provided by a certified Registered Medical Practitioner (B.A.M.S.) registered with the recognized State Ayurvedic Council. Digital prescriptions strictly adhere to permissible Ayurvedic medicines (List O & A). Patient data is maintained confidentially as per the Information Technology Act, 2000 and Digital Personal Data Protection (DPDP) Act, 2023.
+              Sudha Ayurveda operates in strict compliance with the <strong>Telemedicine Practice Guidelines (2020)</strong> notified by the Ministry of Health and Family Welfare (MoHFW) and the National Commission for Indian System of Medicine (NCISM), Government of India. All consultations are provided by a certified Registered Medical Practitioner (B.A.M.S.) registered with the recognized State Ayurvedic Council. Digital prescriptions strictly adhere to permissible Ayurvedic medicines (List O & A). Patient data is maintained confidentially as per the Information Technology Act, 2000 and Digital Personal Data Protection (DPDP) Act, 2023.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-between items-center pt-4 border-t border-white/5 gap-2 text-xs">
-            <p>© {new Date().getFullYear()} SwasthyaVeda. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Sudha Ayurveda. All rights reserved.</p>
             <p className="text-[#C4BFA9]">Ayurvedic Clinical Excellence • Govt. Telemedicine Compliant</p>
           </div>
         </div>

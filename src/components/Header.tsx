@@ -31,7 +31,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[#2A3418] group-hover:text-[#B8892D] transition-colors">
-                Swasthya<span className="text-[#B8892D]">Veda</span>
+                Sudha <span className="text-[#B8892D]">Ayurveda</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-[#6B7B4B] font-medium hidden sm:block">
                 Virtual Ayurvedic Medicine

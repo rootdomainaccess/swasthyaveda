@@ -247,7 +247,7 @@ export default function HomePage() {
             Treating The Root Cause, Not Silencing The Symptoms
           </h2>
           <p className="text-base sm:text-lg text-[#3E4B24]/85 leading-relaxed max-w-3xl mx-auto">
-            Traditional medicine often manages chronic symptoms with lifetime pharmaceuticals that carry side effects. At SwasthyaVeda, our clinical practice targets the metabolic origin—rebalancing biological fires (Agni), clearing micro-vascular obstructions, and restoring endocrine harmony so your body heals itself.
+            Traditional medicine often manages chronic symptoms with lifetime pharmaceuticals that carry side effects. At Sudha Ayurveda, our clinical practice targets the metabolic origin—rebalancing biological fires (Agni), clearing micro-vascular obstructions, and restoring endocrine harmony so your body heals itself.
           </p>
         </div>
       </section>

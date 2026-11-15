@@ -1,4 +1,4 @@
-# Swasthyaveda — Online Ayurvedic Healthcare Platform
+# Sudha Ayurveda — Online Ayurvedic Healthcare Platform
 
 A premium, multi‑page Next.js website for an elite Ayurvedic doctor specializing in virtual, non‑invasive care for chronic lifestyle diseases.
 
@@ -43,7 +43,7 @@ Open http://localhost:3000.
 ```bash
 git config --global user.email "rootdomainaccess@gmail.com"
 git add .
-git commit -m "Initial Swasthyaveda website"
+git commit -m "Initial Sudha Ayurveda website"
 git remote add origin https://github.com/YOUR_USERNAME/swasthyaveda.git
 git push -u origin main
 ```

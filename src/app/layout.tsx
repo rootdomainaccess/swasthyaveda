@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'SwasthyaVeda | Elite Virtual Ayurvedic Medicine & Lifestyle Reversal',
+  title: 'Sudha Ayurveda | Elite Virtual Ayurvedic Medicine & Lifestyle Reversal',
   description: 'Premium virtual Ayurvedic consultations specializing in cardiac wellness, diabetes reversal, and chronic lifestyle disease management through non-invasive medicine.',
   keywords: ['Ayurveda', 'Online Doctor Consultation', 'Virtual Cardiac Care', 'Diabetes Reversal', 'Holistic Telehealth', 'Prakriti Assessment'],
 };
